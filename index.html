@@ -7,9 +7,8 @@
       var msg5 = [""]
       var message = document.getElementById('msg').value;
       var zentai = message
-      var zentai = message.split(/(\n)/);
-      for (var i = 0; i < zentai.length; i++) {      
-      var msg3 = zentai[i-1].split(/ |cute/);
+      zentai.split(/\n/).forEach(function(msg3){
+      msg3.split(/ |cute/);
       if (msg3[0] == "exe") {
       msg3[0] = "execute "
       } else {}
@@ -45,7 +44,7 @@
       msg3.splice( 7 , 0 , " run " );
       var msg4 = msg3.join( ' ' );
       msg5.push(msg4);
-      }
+        });
       var msg6 = msg5.join( '\n' );
       document.getElementById("execute").innerHTML = msg6;
     }
