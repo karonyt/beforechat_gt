@@ -6,13 +6,13 @@
     function conversion() {
       var message = document.getElementById('msg').value;
       var msg2 = message.split(" ");
-      var msg2 = message.split("(~)");
-      msg2.splice( 1 , 0 , " as " );
-      msg2.splice( 3 , 0 , " at @s positioned " );
-      msg2.splice( 7 , 0 , " run " );
+      var msg3 = msg2.split("(~)");
+      msg3.splice( 1 , 0 , " as " );
+      msg3.splice( 3 , 0 , " at @s positioned " );
+      msg3.splice( 7 , 0 , " run " );
 
-      var msg3 = msg2.join( ' ' );
-      document.getElementById("execute").innerHTML = msg3;
+      var msg4 = msg3.join( ' ' );
+      document.getElementById("execute").innerHTML = msg4;
       
     }
 </script>
