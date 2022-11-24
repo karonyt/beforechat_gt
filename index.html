@@ -3,12 +3,15 @@
   <input class="button" type="button" value="変換" onclick="conversion()">
   <p id="execute"></p>
 <script>
+  //ボタン押したことを検知して実行
     function conversion() {
-      var msg5 = [""]
-      var zentai = document.getElementById('msg').value; 
+      //グローバル変数定義
+      var msg5
+      //テキストエリアからzentaiに代入
+      var zentai = document.getElementById('msg').value;
+      
       zentai.split(/\n/).forEach(function(a){
-      a.split(/ |cute/);
-      var msg3 = a
+      msg3 = a.split(/\b|cute/);
       if (msg3[0] == "exe") {
       msg3[0] = "execute "
       } else {}
