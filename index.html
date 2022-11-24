@@ -8,6 +8,8 @@
       var msg2 = message.split(" ");
       msg2.splice( 1 , 0 , " as " );
       msg2.splice( 3 , 0 , " at @s positioned " );
+      msg2.splice( 7 , 0 , " run " );
+
       var msg3 = msg2.join( ' ' );
       document.getElementById("execute").innerHTML = msg3;
       
