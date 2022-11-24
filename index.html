@@ -1,5 +1,15 @@
 <html>
+  <textarea id="msg" cols="100" rows="10"></textarea>
+  <input class="button" type="button" value="変換" onclick="conversion()">
+  <p id="execute"></p>
 <script>
-
+    function conversion() {
+      var message = document.getElementById('msg').value;
+      var msg2 = str.split(" ");
+      msg2.splice( 1 , 0 , "as" );
+      document.getElementById("execute").innerHTML = msg2;
+      
+    }
+</script>
 </script>
 </html>
