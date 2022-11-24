@@ -5,6 +5,8 @@
 <script>
     function conversion() {
       var message = document.getElementById('msg').value;
+      var zentai = message.split(/(\n)/);
+      for (var i = 0; i < zentai.length; i++) {      
       var msg3 = message.split(/ |cute/);
       if (msg3[0] == "exe") {
       msg3[0] = "execute "
@@ -40,6 +42,9 @@
       msg3.splice( 3 , 0 , " at @s positioned " );
       msg3.splice( 7 , 0 , " run " );
       var msg4 = msg3.join( ' ' );
+      var k = "<br>"
+      var msg5 = msg5 + k + msg4
+      }
       document.getElementById("execute").innerHTML = msg4;
     }
 </script>
