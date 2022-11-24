@@ -5,9 +5,9 @@
 <script>
     function conversion() {
       var message = document.getElementById('msg').value;
-      var ret = str.split(/(?<=execute)/g);
+      var msg2 = message.split(/(?<=execute)/g);
 
-      var msg3 = message.split(" ");
+      var msg3 = msg2.split(" ");
       if (msg3[2] == "~~~") {
       msg3[2] = "~ ~ ~"
       } else {
