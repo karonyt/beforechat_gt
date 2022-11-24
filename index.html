@@ -4,7 +4,7 @@
   <p id="execute"></p>
 <script>
     function conversion() {
-      var msg5 = " "
+      var msg5 = [""]
       var message = document.getElementById('msg').value;
       var zentai = message.split(/(\n)/);
       for (var i = 0; i < zentai.length; i++) {      
@@ -43,9 +43,10 @@
       msg3.splice( 3 , 0 , " at @s positioned " );
       msg3.splice( 7 , 0 , " run " );
       var msg4 = msg3.join( ' ' );
-      msg5 += msg4
+      msg5.push(msg4);
       }
-      document.getElementById("execute").innerHTML = msg5;
+      var msg6 = msg5.join( '\n' );
+      document.getElementById("execute").innerHTML = msg6;
     }
 </script>
 </script>
