@@ -5,7 +5,7 @@
 <script>
     function conversion() {
       var message = document.getElementById('msg').value;
-      var msg3 = message.split("(~)"," ");
+      var msg3 = message.split(" ");
       msg3.splice( 1 , 0 , " as " );
       msg3.splice( 3 , 0 , " at @s positioned " );
       msg3.splice( 7 , 0 , " run " );
