@@ -7,7 +7,7 @@
       var message = document.getElementById('msg').value;
       var msg2 = message.split(" ");
       msg2.splice( 1 , 0 , " as " );
-      var msg3 = msg2.replace(/,/g, '');
+      var msg3 = msg2.join( ' ' );
       document.getElementById("execute").innerHTML = msg3;
       
     }
