@@ -5,10 +5,11 @@
 <script>
     function conversion() {
       var message = document.getElementById('msg').value;
-      var kugiri = "execute";
-      var msg2 = message[0].split(kugiri);
       var kugiri = " ";
-      var msg3 = msg2.split(kugiri);
+      var msg2 = message.split(kugiri);
+      var a = msg2
+      var kugiri = "execute";
+      var msg3 = a.split(kugiri);
 
       if (msg3[2] == "~~~") {
       msg3[2] = "~ ~ ~"
