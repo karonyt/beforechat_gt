@@ -5,8 +5,10 @@
 <script>
     function conversion() {
       var message = document.getElementById('msg').value;
+      if (msg3[0] == "execute@") {
+      msg3[0] = "execute @"
+      } else {}
       var msg3 = message.split(" ");
-      var msg3 = msg3.split("(execute)");
       if (msg3[2] == "~~~") {
       msg3[2] = "~ ~ ~"
       } else {
