@@ -7,10 +7,10 @@
       var message = document.getElementById('msg').value;
       var msg3 = message.split(" ");
       if (msg3[2] == "~~~") {
-      var msg3[2] = "~ ~ ~"
+      msg3[2] = "~ ~ ~"
       } else {
       if (msg3[2] == "^^^") {
-      var msg3[2] = "^ ^ ^"
+      msg3[2] = "^ ^ ^"
       } else {
       msg3.splice( 1 , 0 , " as " );
       msg3.splice( 3 , 0 , " at @s positioned " );
