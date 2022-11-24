@@ -3,16 +3,12 @@
   <input class="button" type="button" value="変換" onclick="conversion()">
   <p id="execute"></p>
 <script>
-    function removeComma(number) {
-    var removed = number.replace(/,/g, '');
-    return parseInt(removed, 10);
-    }
     function conversion() {
       var message = document.getElementById('msg').value;
       var msg2 = message.split(" ");
       msg2.splice( 1 , 0 , " as " );
-      var result = removeComma(msg2);
-      document.getElementById("execute").innerHTML = msg2;
+      var msg3 = msg2.replace(/,/g, '');
+      document.getElementById("execute").innerHTML = msg3;
       
     }
 </script>
