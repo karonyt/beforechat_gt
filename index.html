@@ -1,59 +1,21 @@
 <html>
   <textarea id="msg" cols="100" rows="10"></textarea>
   <input class="button" type="button" value="変換" onclick="conversion()">
-  <p id="execute"></p>
+  <p id="executemsg"></p>
 <script>
-  //グローバル変数定義
-    let msg5
-    let msg3 =[];
-      //ボタン押したことを検知して実行
     function conversion() {
-      //グローバル変数定義
-      let msg5
-      //テキストエリアからzentaiに代入
-      var zentai = document.getElementById('msg').value;
-      
-      zentai.split(/\n/).forEach(function(a){
-      msg3 = a.split(/\b|cute/);
-      if (msg3[0] == "exe") {
-      msg3[0] = "execute "
-      } else {}
-
-      if (msg3[2] == "~~~") {
-      msg3[2] = "~ ~ ~"
-      } else {
-      if (msg3[2] == "^^^") {
-      msg3[2] = "^ ^ ^"
-      } else {
-       if (msg3[3] == "^^") {
-      msg3[3] = " ^ ^"
-      } else {
-       if (msg3[2] == "^^") {
-      msg3[2] = "^ ^ "
-      } else {
-       if (msg3[2] == "~~") {
-      msg3[2] = "~ ~ "
-      } else {
-       if (msg3[3] == "~~") {
-      msg3[3] = " ~ ~"
-      } else {
-     
-      }
-      }
-      }
-      }
-     
-      }
-      }
-      msg3.splice( 3 , 0 , " as " );
-      msg3.splice( 4 , 0 , " at @s positioned " );
-      msg3.splice( 7 , 0 , " run " );
-      var msg4 = msg3.join( ' ' );
-      if (typeof msg5 !== "object") msg5 = [];
-      msg5.push(msg4);
-        });
-      var msg6 = msg5.join( '\n' );
-      document.getElementById("execute").innerHTML = msg6;
+    var tet = document.getElementById('msg').value;
+    const execute = (txt) => txt.replace(/execute\s*(?<selector>(?:@(?:[parse]|initiator)|"(?:.*?)(?<!\\)"|\w*)(?:\[(?:\w*=(?:"(?:.*?)(?<!\\)"|\[.*\]|\w*),?\s*)*\])?)\s*(?<x>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<y>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<z>(?:~|\^)?-?\d*(?:\.\d+)?)(?:\s*(?<detect>detect\s*(?<d_x>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<d_y>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<d_z>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<block>\w+)\s*(?<data>-?\d*)))?/g, (...args) => {
+    const group = args.at(-1);
+    let base = `execute as ${group.selector} at @s`;
+    const coord = `${group.x} ${group.y} ${group.z}`;
+    if (coord.includes('~') && coord.includes('^')) throw new TypeError(`構文エラー: ${coord} は無効です`);
+    if (/\d/.test(coord)) base += ` positioned ${coord}`;
+    const d_coord = `${group.d_x} ${group.d_y} ${group.d_z}`;
+    if (d_coord.includes('~') && d_coord.includes('^')) throw new TypeError(`構文エラー: ${d_coord} は無効です`);
+    if (group.detect) base += ` if block ${d_coord} ${group.block} ${group.data}`;
+    document.getElementById("executemsg").innerHTML = `${base}`;
+});
     }
 </script>
 </script>
