@@ -3,19 +3,16 @@
   <input class="button" type="button" value="変換" onclick="conversion()">
   <p id="executemsg"></p>
 <script>
+      //ボタン押したときに関数を実行
     function conversion() {
-    var tet = document.getElementById('msg').value;
-    const execute = (txt) => txt.replace(/execute\s*(?<selector>(?:@(?:[parse]|initiator)|"(?:.*?)(?<!\\)"|\w*)(?:\[(?:\w*=(?:"(?:.*?)(?<!\\)"|\[.*\]|\w*),?\s*)*\])?)\s*(?<x>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<y>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<z>(?:~|\^)?-?\d*(?:\.\d+)?)(?:\s*(?<detect>detect\s*(?<d_x>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<d_y>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<d_z>(?:~|\^)?-?\d*(?:\.\d+)?)\s*(?<block>\w+)\s*(?<data>-?\d*)))?/g, (...args) => {
-    const group = args.at(-1);
-    let base = `execute as ${group.selector} at @s`;
-    const coord = `${group.x} ${group.y} ${group.z}`;
-    if (coord.includes('~') && coord.includes('^')) throw new TypeError(`構文エラー: ${coord} は無効です`);
-    if (/\d/.test(coord)) base += ` positioned ${coord}`;
-    const d_coord = `${group.d_x} ${group.d_y} ${group.d_z}`;
-    if (d_coord.includes('~') && d_coord.includes('^')) throw new TypeError(`構文エラー: ${d_coord} は無効です`);
-    if (group.detect) base += ` if block ${d_coord} ${group.block} ${group.data}`;
-    document.getElementById("executemsg").innerHTML = `${base}`;
-});
+      //msg6を定義
+      let msg6
+      //入力したコマンド全文(msg)を取得して変数(zentai)に代入
+      var zentai = document.getElementById('msg').value;
+      var msg2 = zentai.split('\n');
+      
+      //msg6をexecutemsgに代入
+      document.getElementById("executemsg").innerHTML = msg6;
     }
 </script>
 </script>
