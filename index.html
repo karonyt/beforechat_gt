@@ -11,6 +11,8 @@
       let msg3
       //msg4を定義
       let msg4 = ""
+      //k(改行)を定義
+      let k = "<br>"
       //入力したコマンド全文(msg)を取得して変数(zentai)に代入
       var zentai = document.getElementById('msg').value;
       //改行で分ける
@@ -59,6 +61,7 @@
       console.log(msg3);
       msg3.splice( 3 , 0 , " run ");
       console.log(msg3);
+      msg3 += k
       msg4 += msg3
       console.log(msg4);
       }
