@@ -9,13 +9,15 @@
       let msg6
       //msg3を定義
       let msg3
+      //msg4を定義
+      let msg4
       //入力したコマンド全文(msg)を取得して変数(zentai)に代入
       var zentai = document.getElementById('msg').value;
       //改行で分ける
       var msg2 = zentai.split('\n');
       
       for (let i = 0; i < zentai.length; i++) {
-         msg3 = msg2.split(/ |cute/);
+         msg3 = msg2[i].split(/ |cute/);
       if (msg3[0] == "exe") {
       msg3[0] = "execute "
       } else {}
@@ -46,10 +48,10 @@
      
       }
       }
-      msg3.splice( 3 , 0 , " as " );
-      msg3.splice( 4 , 0 , " at @s positioned " );
-      msg3.splice( 7 , 0 , " run " );
-      var msg4 = msg3.join( ' ' );
+      msg3.splice( 3 , 0 , " as ");
+      msg3.splice( 4 , 0 , " at @s positioned ");
+      msg3.splice( 7 , 0 , " run ");
+      msg4 += msg3
         
       }
       msg6 = msg4
