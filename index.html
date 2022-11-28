@@ -9,8 +9,10 @@
       let msg6
       //入力したコマンド全文(msg)を取得して変数(zentai)に代入
       var zentai = document.getElementById('msg').value;
+      //改行で分ける
       var msg2 = zentai.split('\n');
       
+      msg6 = msg2
       //msg6をexecutemsgに代入
       document.getElementById("executemsg").innerHTML = msg6;
     }
