@@ -14,8 +14,43 @@
       
       for (let i = 0; i < zentai.length; i++) {
          var msg3 = msg2.split(/ |cute/);
+      if (msg3[0] == "exe") {
+      msg3[0] = "execute "
+      } else {}
+
+      if (msg3[2] == "~~~") {
+      msg3[2] = "~ ~ ~"
+      } else {
+      if (msg3[2] == "^^^") {
+      msg3[2] = "^ ^ ^"
+      } else {
+       if (msg3[3] == "^^") {
+      msg3[3] = " ^ ^"
+      } else {
+       if (msg3[2] == "^^") {
+      msg3[2] = "^ ^ "
+      } else {
+       if (msg3[2] == "~~") {
+      msg3[2] = "~ ~ "
+      } else {
+       if (msg3[3] == "~~") {
+      msg3[3] = " ~ ~"
+      } else {
+     
       }
-      msg6 = msg2
+      }
+      }
+      }
+     
+      }
+      }
+      msg3.splice( 3 , 0 , " as " );
+      msg3.splice( 4 , 0 , " at @s positioned " );
+      msg3.splice( 7 , 0 , " run " );
+      var msg4 = msg3.join( ' ' );
+        
+      }
+      msg6 = msg4
       //msg6をexecutemsgに代入
       document.getElementById("executemsg").innerHTML = msg6;
     }
