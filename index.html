@@ -26,22 +26,30 @@
       console.log(msg3);
       
       if (msg3[2] == "~~~") {
-      msg3[2] = "~ ~ ~"
+      msg3.splice( 3 , 1 , "~");
+      msg3.splice( 2 , 0 , "~");
+      msg3.splice( 2 , 0 , "~");
       } else {
       if (msg3[2] == "^^^") {
-      msg3[2] = "^ ^ ^"
+      msg3.splice( 3 , 1 , "^");
+      msg3.splice( 2 , 0 , "^");
+      msg3.splice( 2 , 0 , "^");
       } else {
        if (msg3[3] == "^^") {
-      msg3[3] = " ^ ^"
+      msg3.splice( 4 , 1 , "^");
+      msg3.splice( 3 , 0 , "^");
       } else {
        if (msg3[2] == "^^") {
-      msg3[2] = "^ ^ "
+      msg3.splice( 3 , 1 , "^");
+      msg3.splice( 2 , 0 , "^");
       } else {
        if (msg3[2] == "~~") {
-      msg3[2] = "~ ~ "
+      msg3.splice( 3 , 1 , "~");
+      msg3.splice( 2 , 0 , "~");
       } else {
        if (msg3[3] == "~~") {
-      msg3[3] = " ~ ~"
+      msg3.splice( 4 , 1 , "~");
+      msg3.splice( 3 , 0 , "~");
       } else {
      
       }
@@ -52,14 +60,14 @@
       }
       }
       if (msg3[1] == "") {
-      msg3.splice( 1 , 1 , " as ");
+      msg3.splice( 1 , 1 , "as");
       } else {
-      msg3.splice( 1 , 0 , " as ");
+      msg3.splice( 1 , 0 , "as");
       }
       console.log(msg3);
-      msg3.splice( 3 , 0 , " at @s positioned ");
+      msg3.splice( 3 , 0 , "at @s positioned");
       console.log(msg3);
-      msg3.splice( 6 , 0 , " run ");
+      msg3.splice( 7 , 0 , "run");
       console.log(msg3);
       msg3 += k
       msg4 += msg3
