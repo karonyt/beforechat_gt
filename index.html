@@ -141,12 +141,12 @@
       console.log(msg3);
       msg3.splice( 7 , 0 , "run");
       console.log(msg3);
-      msg3 += k
+      var msg4 = msg3.join(' ');
+      msg4 += k
       msg4 += msg3
       console.log(msg4);
       }
-      var msg7 = msg4.join(' ');
-      msg6 = msg7
+      msg6 = msg4
       console.log(msg6);
       //msg6をexecutemsgに代入
       document.getElementById("executemsg").innerHTML = msg6;
