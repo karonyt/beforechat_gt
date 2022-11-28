@@ -25,32 +25,66 @@
       } else {}
       console.log(msg3);
       
-      if (msg3[2] == "~~~") {
-      msg3.splice( 3 , 1 , "~");
-      msg3.splice( 2 , 0 , "~");
-      msg3.splice( 2 , 0 , "~");
+      if (msg3[3] == "~~~") {
+      msg3.splice( 4 , 1 , "~");
+      msg3.splice( 3 , 0 , "~");
+      msg3.splice( 3 , 0 , "~");
       } else {
-      if (msg3[2] == "^^^") {
-      msg3.splice( 3 , 1 , "^");
-      msg3.splice( 2 , 0 , "^");
-      msg3.splice( 2 , 0 , "^");
+      if (msg3[3] == "^^^") {
+      msg3.splice( 4 , 1 , "^");
+      msg3.splice( 3 , 0 , "^");
+      msg3.splice( 3 , 0 , "^");
+      } else {
+       if (msg3[4] == "^^") {
+      msg3.splice( 5 , 1 , "^");
+      msg3.splice( 4 , 0 , "^");
       } else {
        if (msg3[3] == "^^") {
       msg3.splice( 4 , 1 , "^");
       msg3.splice( 3 , 0 , "^");
       } else {
-       if (msg3[2] == "^^") {
-      msg3.splice( 3 , 1 , "^");
-      msg3.splice( 2 , 0 , "^");
+       if (msg3[3] == "~~") {
+      msg3.splice( 4 , 1 , "~");
+      msg3.splice( 3 , 0 , "~");
       } else {
-       if (msg3[2] == "~~") {
-      msg3.splice( 3 , 1 , "~");
-      msg3.splice( 2 , 0 , "~");
+       if (msg3[4] == "~~") {
+      msg3.splice( 5 , 1 , "~");
+      msg3.splice( 4 , 0 , "~");
+      } else {
+      if (msg3[3] == "~~~") {
+      msg3.splice( 4 , 1 , "~");
+      msg3.splice( 3 , 0 , "~");
+      msg3.splice( 3 , 0 , "~");
+      } else {
+      if (msg3[3] == "^^^") {
+      msg3.splice( 4 , 1 , "^");
+      msg3.splice( 3 , 0 , "^");
+      msg3.splice( 3 , 0 , "^");
+      } else {
+       if (msg3[4] == "^^") {
+      msg3.splice( 5 , 1 , "^");
+      msg3.splice( 4 , 0 , "^");
+      } else {
+       if (msg3[3] == "^^") {
+      msg3.splice( 4 , 1 , "^");
+      msg3.splice( 3 , 0 , "^");
       } else {
        if (msg3[3] == "~~") {
       msg3.splice( 4 , 1 , "~");
       msg3.splice( 3 , 0 , "~");
       } else {
+       if (msg3[4] == "~~") {
+      msg3.splice( 5 , 1 , "~");
+      msg3.splice( 4 , 0 , "~");
+      } else {
+     
+      }
+      }
+      }
+      }
+     
+      }
+      }
      
       }
       }
