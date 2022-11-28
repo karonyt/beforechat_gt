@@ -7,13 +7,15 @@
     function conversion() {
       //msg6を定義
       let msg6
+      //msg3を定義
+      let msg3
       //入力したコマンド全文(msg)を取得して変数(zentai)に代入
       var zentai = document.getElementById('msg').value;
       //改行で分ける
       var msg2 = zentai.split('\n');
       
       for (let i = 0; i < zentai.length; i++) {
-         var msg3 = msg2.split(/ |cute/);
+         msg3 = msg2.split(/ |cute/);
       if (msg3[0] == "exe") {
       msg3[0] = "execute "
       } else {}
