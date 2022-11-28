@@ -17,7 +17,7 @@
       var msg2 = zentai.split('\n');
       console.log(msg2);
       for (let i = 0; i < msg2.length; i++) {
-      msg3 = msg2[i].split(/\b|cute/);
+      msg3 = msg2[i].split(/\u0020|cute/);
       if (msg3[0] == "exe") {
       msg3[0] = "execute "
       } else {}
