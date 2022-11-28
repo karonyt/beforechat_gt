@@ -49,7 +49,11 @@
      
       }
       }
+      if (msg3[1] == "") {
+      msg3.splice( 1 , 1 , " as ");
+      } else {
       msg3.splice( 1 , 0 , " as ");
+      }
       console.log(msg3);
       msg3.splice( 2 , 0 , " at @s positioned ");
       console.log(msg3);
