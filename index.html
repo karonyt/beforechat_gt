@@ -100,32 +100,32 @@
       } else {
       msg3.splice( 1 , 0 , "as");
       }
-      if (msg3[7] == "detect") {
-       if (msg3[8] == "~~~") {
-       msg3.splice( 8 , 1 , "~");
-       msg3.splice( 8 , 0 , "~");
-       msg3.splice( 8 , 0 , "~");
+      if (msg3[8] == "detect") {
+       if (msg3[9] == "~~~") {
+       msg3.splice( 9 , 1 , "~");
+       msg3.splice( 9 , 0 , "~");
+       msg3.splice( 9 , 0 , "~");
        } else {
-       if (msg3[8] == "^^^") {
-       msg3.splice( 8 , 1 , "^");
-       msg3.splice( 8 , 0 , "^");
-       msg3.splice( 8 , 0 , "^");
-       } else {
-       if (msg3[9] == "^^") {
+       if (msg3[9] == "^^^") {
        msg3.splice( 9 , 1 , "^");
        msg3.splice( 9 , 0 , "^");
+       msg3.splice( 9 , 0 , "^");
        } else {
-        if (msg3[8] == "^^") {
-       msg3.splice( 8 , 1 , "^");
-       msg3.splice( 8 , 0 , "^");
+       if (msg3[10] == "^^") {
+       msg3.splice( 10 , 1 , "^");
+       msg3.splice( 10 , 0 , "^");
        } else {
-       if (msg3[8] == "~~") {
-       msg3.splice( 8 , 1 , "~");
-       msg3.splice( 8 , 0 , "~");
+        if (msg3[9] == "^^") {
+       msg3.splice( 9 , 1 , "^");
+       msg3.splice( 9 , 0 , "^");
        } else {
        if (msg3[9] == "~~") {
        msg3.splice( 9 , 1 , "~");
        msg3.splice( 9 , 0 , "~");
+       } else {
+       if (msg3[10] == "~~") {
+       msg3.splice( 10 , 1 , "~");
+       msg3.splice( 10 , 0 , "~");
        } else {
        }
          
