@@ -17,9 +17,9 @@
       for (let i = 0; i < am2; i++) {
       
       if (i == 0) {
-      am3 = `<p>コマンドの最初に入力する文字(!cなど)</p>\n<input type="text" id="pre">\n<p>何を入力したときに実行するか？</p>\n<input type="text" id="moji${i}">\n<p>カスタムコマンドで実行するコマンドを入力(改行で複数可能)</p>\n<textarea id="command${i}" cols="100" rows="10"></textarea>\n`
+      am3 = `<p>コマンドの最初に入力する文字(!cなど)<br></p><input type="text" id="pre"><p><br>何を入力したときに実行するか？<br></p><input type="text" id="moji${i}"><p><br>カスタムコマンドで実行するコマンドを入力(改行で複数可能)<br></p><textarea id="command${i}" cols="100" rows="10"></textarea>`
       } else {
-      am3 = am3 + `<p>何を入力したときに実行するか？</p>\n<input type="text" id="moji${i}">\n<p>カスタムコマンドで実行するコマンドを入力(改行で複数可能)</p>\n<textarea id="command${i}" cols="100" rows="10"></textarea>\n`
+      am3 = am3 + `<p><br>何を入力したときに実行するか？<br></p><input type="text" id="moji${i}"><p><br>カスタムコマンドで実行するコマンドを入力(改行で複数可能)<br></p>\n<textarea id="command${i}" cols="100" rows="10"></textarea>`
       }
       }
       //msg6をexecutemsgに代入
