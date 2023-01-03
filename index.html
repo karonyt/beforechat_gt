@@ -9,8 +9,7 @@
   <p id="executemsg"></p>
 <script>
       //ボタン押したときに関数を実行
-    function click() {
-      
+  const click = () => {
       var am = document.getElementById('am').value;
       console.log(am)
       //改行で分ける
@@ -30,9 +29,9 @@
       console.log(am3)
       let am4 = am3.join("")
       console.log(am4)
-      command.innerHTML = am4;
+      document.getElementById('command');.innerHTML = am4;
       console.log(am4)
-      console.log(command.innerHTML)
+      console.log(document.getElementById('command').innerHTML)
     }
       
     function conversion() {
