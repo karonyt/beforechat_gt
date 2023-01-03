@@ -1,14 +1,14 @@
 <html>
   <p>作るカスタムコマンド数を入力</p>
   <input type="text" id="am">
-  <input class="button" type="button" value="決定" onclick="am()">
+  <input class="button" type="button" value="決定" onclick="click()">
   <div id="command"></div>
   
   <input class="button" type="button" value="生成" onclick="conversion()">
   <p id="executemsg"></p>
 <script>
       //ボタン押したときに関数を実行
-    function am() {
+    function click() {
       
       var am = document.getElementById('am').value;
       //改行で分ける
