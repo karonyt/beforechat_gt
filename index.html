@@ -1,21 +1,14 @@
 <html>
+  <p>カスタムコマンド数を入力</p>
+  <input type="text" id="am">
+  <input type="text" id=""><>
   <textarea id="msg" cols="100" rows="10"></textarea>
   <input class="button" type="button" value="生成" onclick="conversion()">
   <p id="executemsg"></p>
 <script>
       //ボタン押したときに関数を実行
     function conversion() {
-      //msg6を定義
-      let msg6
-      //msg3を定義
-      let msg3
-      //msg4を定義
-      let msg4 = ""
-      //msg5を定義
-      let msg5 = ""
-      //k(改行)を定義
-      let k = "<br>"
-      //入力したコマンド全文(msg)を取得して変数(zentai)に代入
+      
       var zentai = document.getElementById('msg').value;
       //改行で分ける
       var msg2 = zentai.split('\n');
@@ -27,129 +20,6 @@
       } else {}
       console.log(msg3);
       
-      if (msg3[3] == "~~~") {
-      msg3.splice( 3 , 1 , "~");
-      msg3.splice( 3 , 0 , "~");
-      msg3.splice( 3 , 0 , "~");
-      } else {
-      if (msg3[3] == "^^^") {
-      msg3.splice( 3 , 1 , "^");
-      msg3.splice( 3 , 0 , "^");
-      msg3.splice( 3 , 0 , "^");
-      } else {
-       if (msg3[4] == "^^") {
-      msg3.splice( 4 , 1 , "^");
-      msg3.splice( 4 , 0 , "^");
-      } else {
-       if (msg3[3] == "^^") {
-      msg3.splice( 3 , 1 , "^");
-      msg3.splice( 3 , 0 , "^");
-      } else {
-       if (msg3[3] == "~~") {
-      msg3.splice( 3 , 1 , "~");
-      msg3.splice( 3 , 0 , "~");
-      } else {
-       if (msg3[4] == "~~") {
-      msg3.splice( 4 , 1 , "~");
-      msg3.splice( 4 , 0 , "~");
-      } else {
-      if (msg3[3] == "~~~") {
-      msg3.splice( 3 , 1 , "~");
-      msg3.splice( 3 , 0 , "~");
-      msg3.splice( 3 , 0 , "~");
-      } else {
-      if (msg3[3] == "^^^") {
-      msg3.splice( 3 , 1 , "^");
-      msg3.splice( 3 , 0 , "^");
-      msg3.splice( 3 , 0 , "^");
-      } else {
-       if (msg3[4] == "^^") {
-      msg3.splice( 4 , 1 , "^");
-      msg3.splice( 4 , 0 , "^");
-      } else {
-       if (msg3[3] == "^^") {
-      msg3.splice( 3 , 1 , "^");
-      msg3.splice( 3 , 0 , "^");
-      } else {
-       if (msg3[3] == "~~") {
-      msg3.splice( 3 , 1 , "~");
-      msg3.splice( 3 , 0 , "~");
-      } else {
-       if (msg3[4] == "~~") {
-      msg3.splice( 4 , 1 , "~");
-      msg3.splice( 4 , 0 , "~");
-      } else {
-     
-      }
-      }
-      }
-      }
-     
-      }
-      }
-     
-      }
-      }
-      }
-      }
-     
-      }
-      }
-      if (msg3[1] == "") {
-      msg3.splice( 1 , 1 , "as");
-      } else {
-      msg3.splice( 1 , 0 , "as");
-      }
-      if (msg3[8] == "detect") {
-       if (msg3[9] == "~~~") {
-       msg3.splice( 9 , 1 , "~");
-       msg3.splice( 9 , 0 , "~");
-       msg3.splice( 9 , 0 , "~");
-       } else {
-       if (msg3[9] == "^^^") {
-       msg3.splice( 9 , 1 , "^");
-       msg3.splice( 9 , 0 , "^");
-       msg3.splice( 9 , 0 , "^");
-       } else {
-       if (msg3[10] == "^^") {
-       msg3.splice( 10 , 1 , "^");
-       msg3.splice( 10 , 0 , "^");
-       } else {
-        if (msg3[9] == "^^") {
-       msg3.splice( 9 , 1 , "^");
-       msg3.splice( 9 , 0 , "^");
-       } else {
-       if (msg3[9] == "~~") {
-       msg3.splice( 9 , 1 , "~");
-       msg3.splice( 9 , 0 , "~");
-       } else {
-       if (msg3[10] == "~~") {
-       msg3.splice( 10 , 1 , "~");
-       msg3.splice( 10 , 0 , "~");
-       } else {
-       }
-         
-       }
-       }
-       }
-       }
-       }  
-      msg3.splice( 3 , 0 , "at @s positioned");
-      console.log(msg3);
-      msg3.splice( 12 , 0 , "run");
-      }
-      console.log(msg3);
-      msg3.splice( 3 , 0 , "at @s positioned");
-      console.log(msg3);
-      msg3.splice( 7 , 0 , "run");
-      console.log(msg3);
-      msg4 = msg3.join(' ');
-      msg4 += k
-      msg5 += msg4
-      console.log(msg4);
-      }
-      msg6 = msg5
-      console.log(msg6);
       //msg6をexecutemsgに代入
       document.getElementById("executemsg").innerHTML = msg6;
     }
